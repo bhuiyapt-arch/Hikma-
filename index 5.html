@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Al-Hikmah Online Quran Academy | Learn Quran with Tajweed">
+    <meta property="og:description" content="1-on-1 Live Online Quran Classes for Kids & Adults. Book your FREE Trial Class today!">
+    <title>Al-Hikmah Online Quran Academy | Learn Quran with Tajweed</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #063b27;
+            --secondary: #0b5e3f;
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --bg-light: #f8faf9;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Top Announcement Bar */
+        .top-bar {
+            background-color: var(--gold);
+            color: var(--primary);
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: var(--primary);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.35rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            background-color: var(--gold);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(6, 59, 39, 0.95), rgba(11, 94, 63, 0.9)), 
+                        url('https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=1600&q=80') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 85px 20px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            font-size: 1.05rem;
+            color: #e2e8f0;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--primary);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* Section Common */
+        .section {
+            padding: 70px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-header span {
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+        }
+
+        .section-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.1rem;
+            color: var(--primary);
+            margin-top: 5px;
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-box {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--gold);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(6, 59, 39, 0.08);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 15px;
+        }
+
+        .feature-box h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .feature-box p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Courses */
+        .courses-bg {
+            background-color: #eef4f1;
+            padding: 70px 5%;
+        }
+
+        .courses-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .course-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .course-top {
+            background: var(--primary);
+            color: var(--white);
+            padding: 25px;
+        }
+
+        .course-tag {
+            background: var(--gold);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .course-body {
+            padding: 25px;
+        }
+
+        .course-body ul {
+            list-style: none;
+        }
+
+        .course-body ul li {
+            margin-bottom: 10px;
+            font-size: 0.92rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .course-body ul li i {
+            color: var(--secondary);
+        }
+
+        .course-btn {
+            display: block;
+            text-align: center;
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .course-btn:hover {
+            background: var(--gold);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Plans */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .price-card {
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 35px 25px;
+            text-align: center;
+        }
+
+        .price-card.popular {
+            border: 2px solid var(--gold);
+            box-shadow: 0 15px 35px rgba(6, 59, 39, 0.12);
+            position: relative;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: var(--primary);
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .price-amount {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 15px 0;
+        }
+
+        .price-amount span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .price-details {
+            list-style: none;
+            margin: 20px 0 25px;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+
+        .price-details li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+
+        /* REGISTRATION & WHATSAPP BOOKING FORM */
+        .contact-section {
+            background-color: #eef4f1;
+            padding: 70px 5%;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-info h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+        }
+
+        .info-item i {
+            width: 40px;
+            height: 40px;
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .contact-form {
+            padding: 40px 35px;
+        }
+
+        .contact-form h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(11, 94, 63, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        /* Floating WhatsApp */
+        .float-wa {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #042619;
+            color: #94a3b8;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        footer strong {
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .contact-container { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .contact-form { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        🌙 Special Offer: Book Your 2 FREE Trial Classes Today! Limited Seats Available.
+    </div>
+
+    <nav>
+        <a href="#" class="logo"><i class="fa-solid fa-mosque"></i> AL-HIKMAH ACADEMY</a>
+        <a href="#register" class="nav-btn">Free Trial</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-badge">Online Quran Learning Center</div>
+        <h1>Learn to Read the <span>Holy Quran</span> with Proper Tajweed</h1>
+        <p>Interactive 1-on-1 live online classes for Kids & Adults from the comfort of your home. Certified Male & Female teachers available 24/7.</p>
+        <div class="hero-buttons">
+            <a href="#register" class="btn-primary"><i class="fa-solid fa-calendar-check"></i> Book Free Trial Class</a>
+            <a href="#courses" class="btn-outline">Explore Courses</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-header">
+            <span>Why Choose Us</span>
+            <h2>Excellence in Islamic Education</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                <h3>1-on-1 Live Classes</h3>
+                <p>Dedicated personal attention for every student to ensure fast and accurate learning.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <h3>Certified Tutors</h3>
+                <p>Experienced, patient, and qualified male & female teachers fluent in English & Arabic.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+                <h3>Flexible Timings</h3>
+                <p>Choose class schedules that fit your daily routine, available across all time zones.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Kid-Friendly Environment</h3>
+                <p>Engaging and supportive teaching methods designed specifically for young learners.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses-bg" id="courses">
+        <div class="section-header">
+            <span>Our Programs</span>
+            <h2>Structured Quran Courses</h2>
+        </div>
+        <div class="courses-grid">
+            <div class="course-card">
+                <div>
+                    <div class="course-top">
+                        <span class="course-tag">Beginner Level</span>
+                        <h3>Noorani Qaida Foundation</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Arabic Alphabet & Pronunciation</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Proper Makharij (Articulation Points)</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Joining Letters & Harakat</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Ideal for Kids & Absolute Beginners</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="padding: 0 25px 25px;">
+                    <a href="#register" class="course-btn">Select Course</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div>
+                    <div class="course-top">
+                        <span class="course-tag">Most Popular</span>
+                        <h3>Quran Reading with Tajweed</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Complete Quran Recitation (Nazra)</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Practical Application of Tajweed Rules</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Fluency & Melodious Recitation</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Weekly Progress Assessment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="padding: 0 25px 25px;">
+                    <a href="#register" class="course-btn">Select Course</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div>
+                    <div class="course-top">
+                        <span class="course-tag">Essential Islam</span>
+                        <h3>Hifz & Daily Salah / Duas</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Memorization of Short Surahs (Juz Amma)</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Complete 5 Times Salah Training</li>
+                            <li><i class="fa-solid fa-circle-check"></i> 40 Essential Masnoon Duas</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Basic Islamic Manners & Akhlaq</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="padding: 0 25px 25px;">
+                    <a href="#register" class="course-btn">Select Course</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-header">
+            <span>Class Schedules</span>
+            <h2>Flexible Monthly Plans</h2>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Weekend Plan</h3>
+                <div class="price-amount">2 Days <span>/ week</span></div>
+                <ul class="price-details">
+                    <li>8 Live Classes per Month</li>
+                    <li>30 Minutes 1-on-1 Session</li>
+                    <li>Saturday & Sunday</li>
+                    <li>Monthly Progress Report</li>
+                </ul>
+                <a href="#register" class="course-btn">Choose Plan</a>
+            </div>
+
+            <div class="price-card popular">
+                <div class="popular-badge">Recommended</div>
+                <h3>Standard Plan</h3>
+                <div class="price-amount">3 Days <span>/ week</span></div>
+                <ul class="price-details">
+                    <li>12 Live Classes per Month</li>
+                    <li>30 Minutes 1-on-1 Session</li>
+                    <li>Flexible Days Selection</li>
+                    <li>Dedicated Personal Tutor</li>
+                </ul>
+                <a href="#register" class="course-btn">Choose Plan</a>
+            </div>
+
+            <div class="price-card">
+                <h3>Intensive Plan</h3>
+                <div class="price-amount">5 Days <span>/ week</span></div>
+                <ul class="price-details">
+                    <li>20 Live Classes per Month</li>
+                    <li>30 Minutes 1-on-1 Session</li>
+                    <li>Monday to Friday</li>
+                    <li>Fast-Track Tajweed & Hifz</li>
+                </ul>
+                <a href="#register" class="course-btn">Choose Plan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTRATION & WHATSAPP BOOKING FORM -->
+    <section class="contact-section" id="register">
+        <div class="section-header">
+            <span>Admission & Inquiry</span>
+            <h2>Book Your Free Trial Class</h2>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div>
+                    <h3>Start Your Quran Journey Today</h3>
+                    <p>Fill out this form to book your 2 FREE trial classes. Clicking submit will instantly open WhatsApp with your details.</p>
+                    
+                    <div class="info-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp Direct</strong><br>
+                            +61 432 772 444
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-video"></i>
+                        <div>
+                            <strong>Class Platform</strong><br>
+                            Zoom / Skype / Google Meet
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <div>
+                            <strong>Availability</strong><br>
+                            Worldwide (All Time Zones)
+                        </div>
+                    </div>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--gold-light); margin-top: 20px;">
+                    * 100% Free Trial. No advance payment required.
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Student Registration Form</h3>
+                <form id="quranForm" onsubmit="sendToWhatsApp(event)">
+                    <div class="form-group">
+                        <label>Student or Parent Name *</label>
+                        <input type="text" id="studentName" placeholder="Enter full name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Student Age *</label>
+                            <input type="number" id="studentAge" placeholder="e.g. 8 or 25" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Gender / Preferred Tutor *</label>
+                            <select id="gender" required>
+                                <option value="Male Student (Male Tutor)">Male Student (Male Tutor)</option>
+                                <option value="Female Student (Female Tutor)">Female Student (Female Tutor)</option>
+                                <option value="Child (Any Tutor)">Child (Any Tutor)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Select Course *</label>
+                            <select id="course" required>
+                                <option value="Noorani Qaida Foundation">Noorani Qaida Foundation</option>
+                                <option value="Quran Reading with Tajweed">Quran Reading with Tajweed</option>
+                                <option value="Hifz & Daily Salah / Duas">Hifz & Daily Salah / Duas</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Weekly Plan *</label>
+                            <select id="plan" required>
+                                <option value="Standard Plan (3 Days/Week)">Standard (3 Days/Week)</option>
+                                <option value="Weekend Plan (2 Days/Week)">Weekend (2 Days/Week)</option>
+                                <option value="Intensive Plan (5 Days/Week)">Intensive (5 Days/Week)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Country & Preferred Class Time</label>
+                        <input type="text" id="countryTime" placeholder="e.g. Australia, Evening 6 PM">
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Submit & Book on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/61432772444?text=Assalamu%20Alaikum!%20I%20want%20to%20know%20more%20about%20Quran%20classes." class="float-wa" target="_blank" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p><strong>Al-Hikmah Online Quran Academy</strong> &copy; 2026. All Rights Reserved.</p>
+        <p style="margin-top: 5px; font-size: 0.85rem;">WhatsApp: +61 432 772 444 | Spreading the Light of the Holy Quran Worldwide</p>
+    </footer>
+
+    <!-- WhatsApp Direct Script -->
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('studentName').value;
+            const age = document.getElementById('studentAge').value;
+            const gender = document.getElementById('gender').value;
+            const course = document.getElementById('course').value;
+            const plan = document.getElementById('plan').value;
+            const countryTime = document.getElementById('countryTime').value || 'Not specified';
+
+            const phoneNumber = "61432772444";
+
+            const message = `*Assalamu Alaikum! New Free Trial Booking:*%0A%0A` +
+                            `👤 *Name:* ${encodeURIComponent(name)}%0A` +
+                            `🎂 *Age:* ${encodeURIComponent(age)}%0A` +
+                            `👨‍🏫 *Preference:* ${encodeURIComponent(gender)}%0A` +
+                            `📖 *Course:* ${encodeURIComponent(course)}%0A` +
+                            `📅 *Plan:* ${encodeURIComponent(plan)}%0A` +
+                            `🌍 *Country/Time:* ${encodeURIComponent(countryTime)}%0A%0A` +
+                            `Please let me know the available schedule and fees.`;
+
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+
+</body>
+</html>
